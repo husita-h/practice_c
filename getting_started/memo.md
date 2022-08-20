@@ -1,4 +1,5 @@
-# 環境構築
+# 2022-08-20
+## 環境構築
 - vscode 拡張機能
     - C/C++
     - https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools
@@ -149,3 +150,15 @@ double 8byte 小数
 キーボードからの入力を受け付ける
 
 `scanf("入力変換指定子", &変数名);`
+
+---
+# 2022-08-21
+
+## Basic Flow Of Control
+- Sequential
+- Branches
+- Loops
+
+### 関係演算子
+https://9cguide.appspot.com/07-02.html
+
