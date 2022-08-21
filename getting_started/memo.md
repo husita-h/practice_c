@@ -178,3 +178,31 @@ printf("%02d 月目 : %7.0f 円\n", month, money);
 >指定がなければデフォルトが使用される。
 ><小数点以下の幅>は、文字列の場合には最大文字数の意味になる。
 
+---
+## ポインタ
+### メモリICの仕組み
+
+### ポインタとは
+https://www.tutorialspoint.com/cprogramming/c_pointers.htm
+https://9cguide.appspot.com/15-03.html
+メモリのアドレスを指定するための仕組み
+
+*付き音変数
+
+### ポインタの構文
+```c
+int main(void) {
+    int number = 10;
+    int *hoge;
+    hoge = &number;
+    printf("%d\n", number);
+    printf("%d\n", *hoge);
+    return 0;
+}
+```
+
+### ポインタを使うメリット
+
+
+### ポインタを使ったプログラム
+
