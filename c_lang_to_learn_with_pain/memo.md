@@ -70,5 +70,76 @@ main関数の中にすべての処理を書く必要がある
 プロトタイプ宣言
 関数の呼び出し
 
+---
+
+## 12_variable_lifetime
+
+---
+
+### 13_array_and_string
+#### Arrays
+メモリは1byteのデータを格納できるスペースが並んでいるイメージ
+これらのスペースをまとめて確保するための仕組み
+
+#### ?
+なぜ代入していない要素に値入ってるのか
+```c
+#include <stdio.h>
+
+int main(void) {
+    int array [10]; // 確保したいメモリ
+    array [2] = 15; // 代入
+    printf("%d\n", array [2]);
+    printf("%d\n", array [0]);
+    printf("%d\n", array [0]);
+    printf("%d\n", array [1]);
+    printf("%d\n", array [2]);
+    printf("%d\n", array [3]);
+    return 0;
+}
+// ➜  13_array_and_string git:(main) ✗ gcc -o 01_array_and_string 01_array_and_string.c&& ./01_array_and_string
+// 15
+// 44318380
+// 44318380
+// 1
+// 15
+// 1
+```
+
+#### ?
+```c
+// sizeof演算子
+int main(void) {
+    int array [] = {10, 11, 12, 14, 15};
+    int i;
+    for (i = 0; i < sizeof(array) / sizeof(array[i]); i++) {
+        // 代入したい要素2つ指定しているのか
+        printf("%d: %d: %d: %d\n", i, array[i], sizeof(array), sizeof(array[i]));
+    }
+    return 0;
+}
+```
+```log
+➜  13_array_and_string git:(main) ✗ gcc -o 05_array_and_string 05_array_and_string.c&& ./05_array_and_string
+05_array_and_string.c:9:49: warning: format specifies type 'int' but the argument has type 'unsigned long' [-Wformat]
+        printf("%d: %d: %d: %d\n", i, array[i], sizeof(array), sizeof(array[i]));
+                        ~~                      ^~~~~~~~~~~~~
+                        %lu
+05_array_and_string.c:9:64: warning: format specifies type 'int' but the argument has type 'unsigned long' [-Wformat]
+        printf("%d: %d: %d: %d\n", i, array[i], sizeof(array), sizeof(array[i]));
+                            ~~                                 ^~~~~~~~~~~~~~~~
+                            %lu
+2 warnings generated.
+0: 10: 20: 4
+1: 11: 20: 4
+2: 12: 20: 4
+3: 14: 20: 4
+4: 15: 20: 4
+```
+
+---
+
+## String
+
 
 
