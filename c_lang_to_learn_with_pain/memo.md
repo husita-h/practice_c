@@ -140,6 +140,46 @@ int main(void) {
 ---
 
 ## String
+文字列を記憶する変数はない
+何文字なのか事前に知ることができないから
+
+ただし1文字だけなら、事前にその大きさがわかるので変数として扱うことができる
+
+文字変数 char
+char 変数名 = 'アルファベット1文字'
+シングルクォーテーションであること
+char の大きさ 1byte
+アルファベット1文字の大きさ 1byte
+
+printf("%c", hoge);
+
+### atoi関数
+文字列を数値に変換する
+例えばtxtファイルから読み込んだデータは、数値も文字列として認識される
+
+文字列をint型の数値に変換する
+
+atoi
+atod
+atof
+atol
+
+int 数値を代入する変数 = atoi(文字列);
+
+`#include <stdlib.h>`
+のincludeが必要
 
 
+#### ?
+ダブルクオーテーションとシングルクォーテーションの違いは？
 
+```c
+int main(void) {
+    char str [] = "256";
+    // char str [] = '256';
+    int number = atoi(str);
+    printf("%s\n", str);
+    printf("%d\n", number);
+    return 0;
+}
+```
