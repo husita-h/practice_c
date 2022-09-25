@@ -21,3 +21,15 @@ void draw(int n)
     }
     printf("\n");
 }
+
+// ➜  recursion git:(main) ✗ gcc -o 02_recursion 02_recursion.c && ./02_recursion
+// #
+// ##
+// ###
+// ####
+// #####
+// ######
+// #######
+// ########
+// #########
+// ##########

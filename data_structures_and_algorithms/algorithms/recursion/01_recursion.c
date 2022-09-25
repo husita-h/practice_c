@@ -20,14 +20,3 @@ void draw(int n)
     }
 }
 
-// ➜  recursion git:(main) ✗ gcc -o 02_recursion 02_recursion.c && ./02_recursion
-// #
-// ##
-// ###
-// ####
-// #####
-// ######
-// #######
-// ########
-// #########
-// ##########
